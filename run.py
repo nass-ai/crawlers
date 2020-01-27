@@ -22,5 +22,6 @@ def nassai(action, country, path=None):
         return meta.grabtable()
 
 
+
 if __name__ == "__main__":
     nassai()
