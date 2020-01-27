@@ -36,9 +36,6 @@ class Metadata(object):
         self.path = path if path else f"output.csv"
         self.meta_urls = None
 
-    def get_urls(self):
-        raise NotImplementedError('Please, implement a logic to retrieve urls and assign the result to meta_urls')
-
     def grabtable(self):
         """
         Grab table and store values in variable. You can access the urls here with self.meta_urls.

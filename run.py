@@ -1,4 +1,4 @@
-from crawler.custom import NigerianBills
+from crawler.custom import NigerianBills, KenyanBills
 from crawler.base import Metadata
 
 import click
@@ -13,6 +13,9 @@ def nassai(action, country, path=None):
     if action == "crawl":
         if country == "nigeria":
             crawler = NigerianBills(path=path)
+            return crawler.crawl()
+        elif country == "kenya":
+            crawler = KenyanBills(path=path)
             return crawler.crawl()
     elif action == "metadata":
         meta = Metadata(path)
